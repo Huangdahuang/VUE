@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+        {{message}}
+    </div>
+    <div id="app-2">
+        {{a}}
+    </div>
+    <div id="app-3">
+        <p>{{foo}}</p>
+        <button v-on:click="foo = 'baz'">Change it</button>
+    </div>
+    <div id="app-4">
+        <p>Message : {{message}}</p>
+        <p>MessageReserve: {{reMessage}}</p>
+        <p>MessageMethod:{{me()}}</p>
+    </div>
+    <div id="app-5">
+        <p>侦听属性:{{fullName}}</p>
+    </div>
+    <script src="index.js" charset="utf-8"></script>
+</body>
