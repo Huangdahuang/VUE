@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="./index.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <!-- 声明式渲染-->
+        <div id="app">
+            {{message}}
+        </div>
+
+        <div id="app-2">
+                <span v-bind:title="message">
+                        鼠标悬停几秒钟查看此处动态绑定的提示信息！
+                </span>
+        </div>
+
+        <!--条件与循环-->
+        <div id="app-3">
+           <p v-if="seen">现在你看到我了</p>
+        </div>
+
+        <div id="app-4">
+            <ol v-for = 'todo in todos'>
+               <!-- {{ todo  }}<br/> -->    
+                {{ todo.text  }}
+            </ol>
+        </div>
+
+        <div id="app-5">
+            <span>{{message}}</span>
+            <button v-on:click='reverseMessage'>消息反转</button>
+        </div>
+
+        <!--处理用户输入-->
+        <div id="app-6">
+                <span>{{message}}</span>
+                <input v-model="message">
+            </div>
+        <script src="./index.js"></script>
+    </body>
+</html>
