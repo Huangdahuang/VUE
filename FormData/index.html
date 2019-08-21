@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+  <!-- 文本 -->
+  <div id="example1">
+      <input v-model="message" placeholder="edit me"><button v-on:click="clear">clear</button>
+      <p>Message is: {{ message }}</p>
+  </div>
+
+  <!-- 多行文本 -->
+  <div id="example2">
+    <span>Multiline message is:</span>
+    <p>{{message}}</p>
+    <textarea v-model="message"></textarea>
+  </div>
+<!-- 复选框 -->
+
+<div id="example3">
+  <input type="checkbox" v-model="checked" id="checkbox" value="hhh">
+  <label for="checkbox">{{checked}}</label>
+  <p>{{checked}}</p>
+</div>
+    <script src="index.js" charset="utf-8"></script>
+</body>
