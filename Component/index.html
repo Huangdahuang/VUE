@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+    </div>
+
+    <div id="app-2">
+        <blog-post title="你好"></blog-post>
+        <blog-post title="大家好"></blog-post>
+        <blog-post title="才是真的好"></blog-post>
+    </div>
+
+    <div id="app-3">
+        <blog-post
+            v-for="(post, index) in posts" :key="index"
+            v-bind:title="post.title"
+            v-bind:key="post.index"
+        ></blog-post>
+    </div>
+
+    <div id="app-4" v-bind:style="{fontSize:postFontSize + 'em'}">
+        <blog-post2
+            v-for="(post, index) in posts" :key="index"
+            v-bind:post="post"
+            v-bind:key="post.index"
+            v-on:enlarge-text="postFontSize += 0.1"
+        ></blog-post2>
+    </div>
+    <script src="index.js" charset="utf-8"></script>
+</body>
