@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <ul id="example1">
+        <li v-for="(item,index) in items">
+          {{parent}}--{{index}}---{{item}}
+        </li>
+    </ul>
+    <ul id="app">
+      <li v-for="(n1, index1) in number" :key="index1">{{ n1 }}</li> 
+      <span v-for="n in 10">{{ n + 1 }} </span>
+
+      <template v-for="(item, index) in items">
+        <li v-bind:style="[fontColor,size]">
+          {{item.msg}}
+        </li>
+      </template>
+
+    </ul>
+
+    <script src="index.js" charset="utf-8"></script>
+</body>

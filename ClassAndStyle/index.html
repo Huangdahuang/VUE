@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app" v-bind:class="{active:isActive}"></div>
+    <!-- 绑定的数据对象不必内联定义在模板里 -->
+    <div id="app-2" v-bind:class="classObject"></div>
+
+    <div id="app-3" v-bind:style="{color:activeColor,fontSize:fontsize + 'px'}">Hello World</div>
+    <script src="index.js" charset="utf-8"></script>
+</body>
